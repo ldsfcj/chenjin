@@ -4,3 +4,48 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 $ sudo service docker restart
 $ sudo service docker status (should see active (running))
 $ sudo docker run hello-world
+
+
+
+--------------------------------------*********---------------------------------
+Docker 帮助命令
+1.  docker version 版本信息
+2.  docker info docker的具体信息
+3.  docker --help
+
+Docker 镜像命令
+1.  docker images 查看本机上的镜像
+2.  docker images -a 本机上所以的镜像，包含中间层
+3.  docker images -q 只显示本机镜像的id
+4.  docker images -qa 只显示所有本机镜像的id
+5.  docker images --digests 显示摘要信息
+6.  docker --no-trunc 显示完整的镜像信息
+7.  docker search 某个xxx镜像的名字  docker search -s 30 tomcat 筛选Star超过30的   / docker search -s 30 --no-trunc tomcat 说明不省略
+8.  docker pull 某个xxx镜像的下载
+9.  docker rmi 某个xxx镜像的删除 docker rmi -f 镜像ID/ 删除多个：docker rmi -f 镜像名1:TAG 镜像名2:TAG/ 删除全部：docker rmi -f $(docker images -qa)
+
+
+10.docker commit/docker push
+
+Docker 容器命令
+
+新建并启动容器
+1.docker run[OPTIONS]IMAGE[COMMAND][ARG...]
+查看docker中运行的容器
+2.docker ps
+停止容器
+3.stop
+退出容器
+4.exit  容器停止退出
+5.ctrl+P+Q  容器不停止退出
+6.
+7.
+8.
+9.
+10.
+11.
+
+
+Docker 总结
+
+镜像是分层的
