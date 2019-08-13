@@ -31,16 +31,27 @@ Docker 容器命令
 
 新建并启动容器
 1.docker run[OPTIONS]IMAGE[COMMAND][ARG...]
+docker run -it --name mycentos0115//例子
+
 查看docker中运行的容器
 2.docker ps
+
 停止容器
 3.stop
+
 退出容器
 4.exit  容器停止退出
 5.ctrl+P+Q  容器不停止退出
-6.
-7.
-8.
+
+查看当前和历史运行的容器
+6.docker ps -a
+
+查看上一次运行的容器
+7.docker ps -l
+
+显示最近n个创建的容器
+8. docker ps -n [number]
+
 9.
 10.
 11.
