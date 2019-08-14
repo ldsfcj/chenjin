@@ -27,35 +27,48 @@ Docker 镜像命令
 
 10.docker commit/docker push
 
-Docker 容器命令
-
+Docker 容器命令(上)
 新建并启动容器
 1.docker run[OPTIONS]IMAGE[COMMAND][ARG...]
-docker run -it --name mycentos0115//例子
-
+docker run -it --name mycentos0115//例子  //交互式启动容器(即启动容器并返回交互命令行)
 查看docker中运行的容器
 2.docker ps
-
 停止容器
-3.stop
-
+3.docker stop [Container ID]
+强制关闭
+docker skill [CONTAINER ID]
 退出容器
 4.exit  容器停止退出
 5.ctrl+P+Q  容器不停止退出
-
 查看当前和历史运行的容器
 6.docker ps -a
-
 查看上一次运行的容器
 7.docker ps -l
-
 显示最近n个创建的容器
 8. docker ps -n [number]
+重启容器
+9.docker restart [Container ID]
+删除容器
+10.docker rm CONTAINER ID
+强制删除（先关再删）
+11.docker rm -f CONTAINER ID
 
-9.
-10.
-11.
 
+Docker  容器命令(下)
+启动守护式容器
+1.docker run -d
+查看容器日志
+docker logs -f/-t/--tail 容器ID //-t是加入时间戳 -f跟随最新的日志打印 -tail数字显示最后多少条
+查看容器内运行的进程
+docker top 容器ID
+查看容器内部细节
+docker inspect 容器ID
+进入正在运行的容器并以命令行交互
+docker exec -it 容器ID bashshell 不需要进入到命令行执行命令
+ 重新进入docker attach 容器ID
+
+从容器内拷贝文件到主机上
+docker cp 容器ID:容器内路径 目的主机路径
 
 Docker 总结
 
